@@ -1,5 +1,6 @@
 name = Apache Solr Indexer for Asset
 description = Indexer for reading asset entity types into a solr core.
 dependencies[] = apachesolr
+dependencies[] = asset
 package = Search Toolkit
 core = 7.x

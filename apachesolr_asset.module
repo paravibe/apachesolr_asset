@@ -76,7 +76,7 @@ function apachesolr_asset_solr_reindex($env_id, $bundle = NULL) {
       $select->condition('a.type', $indexable_bundles, 'IN');
     }
 
-    // Insert the selected taxonomy_term data into the index table.
+    // Insert the selected asset data into the index table.
     $insert = db_insert($indexer_table)
       ->fields(array('entity_id', 'bundle', 'entity_type', 'changed'))
       ->from($select)
@@ -89,7 +89,7 @@ function apachesolr_asset_solr_reindex($env_id, $bundle = NULL) {
 }
 
 /**
- * Status callback for ApacheSolr, for terms.
+ * Status callback for ApacheSolr, for assets.
  *
  * @param int $entity_id
  *   ID of the asset to check.
